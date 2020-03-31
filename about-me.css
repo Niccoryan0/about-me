@@ -3,10 +3,22 @@ body,html {
   background: linear-gradient(-20deg, #ad7462, #80eaee, #0af7c3, #23d5ab);
   background-repeat: no-repeat;
   background-size: 100% 200%;
+  text-align: center;
 
 }
 
 header {
   text-align: center;
+  border: dotted;
 }
 
+#bioP {
+  text-align: center;
+
+}
+
+#picOfMe {
+  border-radius: 50%;
+  float: left;
+  shape-outside: circle;
+}
