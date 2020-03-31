@@ -9,7 +9,7 @@ function askQ(question, variable, ans) {
   }
 }
 
-askQ('Is my hair red?', 'Hair Color', true);
+askQ('Is my hair red? Ok for Yes, Cancel for No', 'Hair Color', true);
 askQ('Was I born in Washington?', 'Birthplace', true);
 askQ('Did I study anthropology?', 'Degree', false);
 askQ('Have I ever been to Mexico?', 'Mexico', false);

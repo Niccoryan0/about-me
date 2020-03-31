@@ -1,0 +1,12 @@
+body,html {
+
+  background: linear-gradient(-20deg, #ad7462, #80eaee, #0af7c3, #23d5ab);
+  background-repeat: no-repeat;
+  background-size: 100% 200%;
+
+}
+
+header {
+  text-align: center;
+}
+
