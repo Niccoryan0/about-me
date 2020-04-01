@@ -16,11 +16,11 @@ function askQ(question, variable, ans) {
   }
 }
 
-// askQ('Is my hair red?', 'Hair Color', 'y');
-// askQ('Was I born in Washington?', 'Birthplace', 'y');
-// askQ('Did I study anthropology?', 'Degree', 'n');
-// askQ('Have I ever been to Mexico?', 'Mexico', 'n');
-// askQ('Am I a software developer?', 'Software Dev', 'y');
+askQ('Is my hair red?', 'Hair Color', 'y');
+askQ('Was I born in Washington?', 'Birthplace', 'y');
+askQ('Did I study anthropology?', 'Degree', 'n');
+askQ('Have I ever been to Mexico?', 'Mexico', 'n');
+askQ('Am I a software developer?', 'Software Dev', 'y');
 
 
 // let usersName = prompt('But enough about me, what\'s your name?');
@@ -29,12 +29,12 @@ function askQ(question, variable, ans) {
 
 
 // Number Guessing Game! Set the number and give the user 4 attempts to solve it while telling them if their guess is too high or low.
-alert('Let\' play a game now, I\'m thinking of a number between 1 and 50')
+alert('Let\' play a guessing game now.');
 
 let numAns = 24;
 let guessCountNum = 0;
 do {
-  var guessNumber = Number(prompt('How old am I? Attempts remaining: ' + (4 - guessCountNum)));
+  var guessNumber = parseInt(prompt('How old am I? Attempts remaining: ' + (4 - guessCountNum)), 10);
   // Check if guess is correct, too high, or too low, respond accordingly
   if (guessNumber === numAns) {
     console.log(numAns + ' is correct, congratulations! You used: ' + guessCountNum + ' attempts, not bad!');
@@ -59,7 +59,7 @@ var guessCountMulti = 0;
 var correct = false;
 while (guessCountMulti < 6) {
   var guessMulti = prompt('Try to guess one of my favorite minerals! Attempts remaining: ' + (6 - guessCountMulti));
-  for (var i; i < favMinerals.length; i++) {
+  for (var i = 0; i < favMinerals.length; i++) {
     if (guessMulti.toLowerCase() === favMinerals[i].toLowerCase()) {
       console.log('You got one! My favorite minerals are: ' + favMinerals);
       correct = true;
@@ -85,15 +85,20 @@ switch (scoreCount){
 case 0:
   alert('Its like you don\'t know me at all ' + usersName + '! You got 0 answer\'s correct, better luck next time!');
   break;
+case 1:
+case 2:
+case 3:
+case 4:
+case 5:
+case 6:
+  alert('Thanks for playing ' + usersName + '! You scored: ' + scoreCount + ' points total');
+  break;
 case 7:
   alert('Wow!! You got all 7, way to go' + usersName + '!');
   break;
-default:
-  alert('Thanks for playing ' + usersName + '! You scored: ' + scoreCount + 'total');
-  break;
 }
 alert('Good job ' + usersName + ', you scored a total of ' + scoreCount + ' points across all those games!');
-alert('I hope you enjoyed these games today ' + usersName + ', hope to see you again soon!');
+alert('I hope you enjoyed these games today ' + usersName + ', I hope you find my bio informative and enjoy your visit!');
 
 
 // For the sticky header, information from W3 Schools:
