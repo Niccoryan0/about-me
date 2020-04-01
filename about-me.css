@@ -4,21 +4,54 @@ body,html {
   background-repeat: no-repeat;
   background-size: 100% 200%;
   text-align: center;
-
+  font-family: monospace;
+  line-height: 200%;
 }
+
 
 header {
   text-align: center;
-  border: dotted;
+  border: solid;
+  font-family: fantasy;
+  background-color: rgb(26, 156, 85);
+  opacity: 0.75;
 }
 
-#bioP {
-  text-align: center;
+ul {
+  list-style-position: inside;
+}
 
+#bio {
+  padding-bottom: 10px;
+  border:solid;
 }
 
 #picOfMe {
   border-radius: 50%;
   float: left;
   shape-outside: circle;
+}
+
+#edu {
+  border: solid;
+}
+
+#exp {
+  border: solid;
+}
+
+#goals {
+  border: solid;
+}
+
+
+/* Next two styles are for sticky header, the sticky class is created in JS and applied to the header when the browser scrolls far enough, the information was found at W3 School's page on sticky headers. */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
 }
