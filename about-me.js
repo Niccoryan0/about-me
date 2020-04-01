@@ -16,17 +16,17 @@ function askQ(question, variable, ans) {
   }
 }
 
-askQ('Is my hair red?', 'Hair Color', 'y');
-askQ('Was I born in Washington?', 'Birthplace', 'y');
-askQ('Did I study anthropology?', 'Degree', 'n');
-askQ('Have I ever been to Mexico?', 'Mexico', 'n');
-askQ('Am I a software developer?', 'Software Dev', 'y');
+let qList = ['Is my hair red?', 'Was I born in Washington?', 'Did I study anthropology?', 'Have I ever been to Mexico?', 'Am I a software developer?'];
+let varList = ['Hair Color', 'Birthplace', 'Degree', 'Mexico', 'Software Dev'];
+let ansList = ['y', 'y', 'n', 'n', 'y'];
 
+for (var i = 0; i < qList.length(); i++) {
+  askQ(qList[i], varList[i], ansList[i]);
+}
 
 // let usersName = prompt('But enough about me, what\'s your name?');
 // alert('Hi, ' + usersName + ' glad to have you here!');
 // alert('It was nice to see you today ' + usersName + ', hope to see you again soon!');
-
 
 // Number Guessing Game! Set the number and give the user 4 attempts to solve it while telling them if their guess is too high or low.
 alert('Let\' play a guessing game now.');
@@ -59,8 +59,8 @@ var guessCountMulti = 0;
 var correct = false;
 while (guessCountMulti < 6) {
   var guessMulti = prompt('Try to guess one of my favorite minerals! Attempts remaining: ' + (6 - guessCountMulti));
-  for (var i = 0; i < favMinerals.length; i++) {
-    if (guessMulti.toLowerCase() === favMinerals[i].toLowerCase()) {
+  for (var x = 0; x < favMinerals.length; x++) {
+    if (guessMulti.toLowerCase() === favMinerals[x].toLowerCase()) {
       console.log('You got one! My favorite minerals are: ' + favMinerals);
       correct = true;
       scoreCount++;
@@ -76,8 +76,6 @@ while (guessCountMulti < 6) {
 if (guessCountMulti >= 4) {
   console.log('Sorry, attempt limit (6) reached, my favorite minerals are: ' + favMinerals);
 }
-
-
 
 // Display final score
 let usersName = prompt('Thanks for playing! Enough about me though, what\'s your name?');
@@ -98,8 +96,7 @@ case 7:
   break;
 }
 alert('Good job ' + usersName + ', you scored a total of ' + scoreCount + ' points across all those games!');
-alert('I hope you enjoyed these games today ' + usersName + ', I hope you find my bio informative and enjoy your visit!');
-
+alert('I hope you enjoyed these games today ' + usersName + ', and maybe you\'ll find my bio informative and enjoy your visit!');
 
 // For the sticky header, information from W3 Schools:
 // To execute when the user scrolls:
