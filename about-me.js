@@ -27,29 +27,74 @@ function askQ(question, variable, ans) {
 // alert('Hi, ' + usersName + ' glad to have you here!');
 // alert('It was nice to see you today ' + usersName + ', hope to see you again soon!');
 
+
+// Number Guessing Game! Set the number and give the user 4 attempts to solve it while telling them if their guess is too high or low.
 alert('Let\' play a game now, I\'m thinking of a number between 1 and 50')
 
-let numAns = 10;
-let guessCount = 0;
+let numAns = 24;
+let guessCountNum = 0;
 do {
-  var guessNumber = Number(prompt('Choose a number (1-50)!'));
+  var guessNumber = Number(prompt('How old am I? Attempts remaining: ' + (4 - guessCountNum)));
+  // Check if guess is correct, too high, or too low, respond accordingly
   if (guessNumber === numAns) {
-    console.log(numAns + ' is correct, congratulations!');
+    console.log(numAns + ' is correct, congratulations! You used: ' + guessCountNum + ' attempts, not bad!');
     scoreCount++;
     break;
   } else if (guessNumber > numAns){
-    console.log('Too high! Try something lower.')
+    console.log('Too high! Try something lower.');
   } else if (guessNumber < numAns){
-    console.log('Too low! Try something higher.')
+    console.log('Too low! Try something higher.');
   }
-  guessCount++;
+  guessCountNum++;
   // Runs game until guess limit reached OR the correct answer is guessed
-} while(guessCount < 4);
-console.log(guessNumber);
+} while(guessCountNum < 4);
 
-if (guessCount === 4){
-  console.log('Attempt limit (4) reached! The number was' + numAns);
+if (guessCountNum === 4){
+  console.log('Attempt limit (4) reached! The number was ' + numAns);
 }
+
+// Multiple correct answers guessing game, make a question with more than one right answer, give the user 6 attempts to guess one of the correct answers
+var favMinerals = ['Tourmaline', 'Bismuth', 'Opal', 'Fluorite', 'Amethyst', 'Azurite', 'Realgar', 'Rhodochrosite', 'Pyrite', 'Labradorite'];
+var guessCountMulti = 0;
+var correct = false;
+while (guessCountMulti < 6) {
+  var guessMulti = prompt('Try to guess one of my favorite minerals! Attempts remaining: ' + (6 - guessCountMulti));
+  for (var i; i < favMinerals.length; i++) {
+    if (guessMulti.toLowerCase() === favMinerals[i].toLowerCase()) {
+      console.log('You got one! My favorite minerals are: ' + favMinerals);
+      correct = true;
+      scoreCount++;
+      break;
+    }
+  }
+  if (correct) {
+    break;
+  } else {
+    guessCountMulti++;
+  }
+}
+if (guessCountMulti >= 4) {
+  console.log('Sorry, attempt limit (6) reached, my favorite minerals are: ' + favMinerals);
+}
+
+
+
+// Display final score
+let usersName = prompt('Thanks for playing! Enough about me though, what\'s your name?');
+switch (scoreCount){
+case 0:
+  alert('Its like you don\'t know me at all ' + usersName + '! You got 0 answer\'s correct, better luck next time!');
+  break;
+case 7:
+  alert('Wow!! You got all 7, way to go' + usersName + '!');
+  break;
+default:
+  alert('Thanks for playing ' + usersName + '! You scored: ' + scoreCount + 'total');
+  break;
+}
+alert('Good job ' + usersName + ', you scored a total of ' + scoreCount + ' points across all those games!');
+alert('I hope you enjoyed these games today ' + usersName + ', hope to see you again soon!');
+
 
 // For the sticky header, information from W3 Schools:
 // To execute when the user scrolls:
