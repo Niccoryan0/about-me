@@ -12,7 +12,8 @@ body{
 header {
   margin: 5px;
   text-align: center;
-  border: solid;
+  border: inset;
+  height: 110px;
   font-family: fantasy;
   background-color: rgb(26, 156, 85);
   opacity: 0.75;
@@ -20,12 +21,18 @@ header {
 
 ul {
   list-style-position: inside;
+  margin:0;
+  padding: 0;
 }
 
 #bio {
   padding-bottom: 10px;
   border:solid;
+  padding: 5px;
   margin: 5px;
+  width: 390px;
+  float:left;
+  height: 493px;
 }
 
 #picOfMe {
@@ -37,16 +44,32 @@ ul {
 #edu {
   border: solid;
   margin: 5px;
+  width: 460px;
+  /* display: inline-block; */
+  float: right;
+}
+
+#eduB {
+  /* text-align: left; */
 }
 
 #exp {
   border: solid;
   margin: 5px;
+  float: right;
+  width: 460px;
+  height: 350px;
+}
+
+#expB {
+  /* text-align: left; */
 }
 
 #goals {
   border: solid;
   margin: 5px;
+  float: bottom;
+  clear: left;
 }
 
 #favRocks {
