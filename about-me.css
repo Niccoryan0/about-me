@@ -49,6 +49,11 @@ ul {
   margin: 5px;
 }
 
+#favRocks {
+  border: solid;
+  margin: 5px;
+}
+
 
 /* Next two styles are for sticky header, the sticky class is created in JS and applied to the header when the browser scrolls far enough, the information was found at W3 School's page on sticky headers. */
 .sticky {
