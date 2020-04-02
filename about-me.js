@@ -29,22 +29,26 @@ for (var i = 0; i < qList.length; i++) {
 // alert('It was nice to see you today ' + usersName + ', hope to see you again soon!');
 
 // Number Guessing Game! Set the number and give the user 4 attempts to solve it while telling them if their guess is too high or low.
-alert('Let\' play a guessing game now.');
+alert('Let\'s play a guessing game now.');
 
-let numAns = Math.floor(Math.random() * 50);
-// console.log(numAns);
+let numAns = Math.floor(Math.random() * 20);
+console.log(numAns);
 let guessCountNum = 0;
 do {
-  var guessNumber = parseInt(prompt('Guess a random number from 1 to 50! Attempts remaining: ' + (4 - guessCountNum)), 10);
+  var guessNumber = parseInt(prompt('Guess a random number from 1 to 20! Attempts remaining: ' + (4 - guessCountNum)), 10);
   // Check if guess is correct, too high, or too low, respond accordingly
   if (guessNumber === numAns) {
     alert(numAns + ' is correct, congratulations! You used: ' + guessCountNum + ' attempts, not bad!');
     scoreCount++;
     break;
+  } else if (typeof guessNumber !== 'number') {
+    alert('Enter a NUMBER between 1 and 20');
   } else if (guessNumber > numAns){
     alert('Too high! Try something lower.');
   } else if (guessNumber < numAns){
     alert('Too low! Try something higher.');
+  } else {
+    alert('Sorry I didn\'t catch that, please guess a number between 1 and 20');
   }
   guessCountNum++;
   // Runs game until guess limit reached OR the correct answer is guessed
