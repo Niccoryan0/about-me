@@ -1,11 +1,12 @@
 body{
-
-  background: linear-gradient(-20deg, #ad7462, #80eaee, #0af7c3, #23d5ab);
+  background: linear-gradient(-20deg, #BC3F65, #80eaee, #BC3F65, rgb(109, 34, 55));
   background-repeat: no-repeat;
   background-size: 100% 200%;
   text-align: center;
   font-family: monospace;
   line-height: 200%;
+  color: rgb(32, 29, 29);
+  border-color: black;
 }
 
 
@@ -15,11 +16,19 @@ header {
   border: inset;
   height: 110px;
   font-family: fantasy;
-  background-color: rgb(26, 156, 85);
+  background-color: #77BB3F;
   opacity: 0.75;
+  color: black;
 }
 
-ul {
+section {
+  border: solid;
+  border-radius: 25px;
+  padding: 5px;
+  margin: 5px;
+}
+
+ul, ol {
   list-style-position: inside;
   margin:0;
   padding: 0;
@@ -27,12 +36,10 @@ ul {
 
 #bio {
   padding-bottom: 10px;
-  border:solid;
-  padding: 5px;
-  margin: 5px;
-  width: 390px;
+  width: 45%;
   float:left;
-  height: 493px;
+  height: 30%;
+  clear: left;
 }
 
 #picOfMe {
@@ -41,32 +48,15 @@ ul {
   shape-outside: circle;
 }
 
-#edu {
-  border: solid;
-  margin: 5px;
-  width: 460px;
-  /* display: inline-block; */
+#edu, #exp {
+  width: 45%;
+ 
   float: right;
-}
-
-#exp {
-  border: solid;
-  margin: 5px;
-  float: right;
-  width: 460px;
-  height: 350px;
 }
 
 #goals {
-  border: solid;
-  margin: 5px;
   float: bottom;
-  clear: left;
-}
-
-#favRocks {
-  border: solid;
-  margin: 5px;
+  clear: both;
 }
 
 
@@ -74,7 +64,7 @@ ul {
 .sticky {
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 96.5%;
 }
 
 .sticky + .content {
