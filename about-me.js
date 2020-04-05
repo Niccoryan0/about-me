@@ -82,7 +82,7 @@ function askMinQ() {
 }
 
 // Asks name, returns a response based on user's score in the questions, says goodbye
-function finalScore(){
+function finalScore() {
   let usersName = prompt('Alright, well that\'s enough about me though, what\'s your name?');
   switch (scoreCount){
   case 0:
@@ -99,7 +99,7 @@ function finalScore(){
     break;
   case 7:
     alert('Wow!! You got all 7 points, way to go ' + usersName + '!!');
-    document.getElementById('ifPerfect').innerHTML='But you already know all this,' + usersName + '! You got a perfect score on the questions!';
+    document.getElementById('ifPerfect').innerHTML='But you already know all this, ' + usersName + '! You got a perfect score on the questions!';
     break;
   }
   alert('I hope you enjoyed these games today ' + usersName + ', and maybe you\'ll find my bio informative and enjoy your visit!');
@@ -114,6 +114,8 @@ for (var i = 0; i < qList.length; i++) {
 askNumQ();
 askMinQ();
 finalScore();
+
+
 
 // =================================== STICKY HEADER ==============================
 // For the sticky header, information from W3 Schools:

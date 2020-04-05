@@ -1,24 +1,48 @@
 body{
-  background: linear-gradient(-20deg, #BC3F65, #80eaee, #BC3F65, rgb(109, 34, 55));
-  background-repeat: no-repeat;
-  background-size: 100% 200%;
+  background: linear-gradient(-45deg, rgba(0, 119, 255, 0.75), rgba(79, 247, 253, 0.75),
+   rgba(255, 0, 212, 0.75), rgba(255, 49, 128, 0.75));
+
+	background-size: 600% 600%;
+  animation: gradient 15s infinite;
+  /* This is what allows the keyframes to work below, animation is given a name (gradient) a duration of each loop (15s), and how many times to run (infinite) */
   text-align: center;
   font-family: monospace;
   line-height: 200%;
-  color: rgb(32, 29, 29);
+  /* color: rgb(32, 29, 29); */
+  font-size: larger;
   border-color: black;
+  /* font-weight: bold; */
 }
 
+/* Keyframes for the animated background, information on how to do this was found at: https://codepen.io/P1N2O/pen/pyBNzX */
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	25% {
+		background-position: 40% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+  }
+  75% {
+    background-position: 40% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* The effect is achieved by creating a gradient background, assigning an animation to it, zooming really far (these three are done above in the body tag), and then slowly moving the backgorund, which is what the @keyframes rule does, tells the background to gradually move position across the screen. The 0% to 40% to 100% and back again was to give a very subtle change to the speed it moves, just for fun alternatively, could have used ease above in the animation tag on body, it creates a similar effect. */
 
 header {
   margin: 5px;
   text-align: center;
   border: inset;
-  height: 110px;
+  height: 120px;
   font-family: fantasy;
-  background-color: #77BB3F;
-  opacity: 0.75;
+  background-color: rgba(255, 0, 119, 0.5);
   color: black;
+  width: 98.5%;
 }
 
 section {
@@ -32,6 +56,14 @@ ul, ol {
   list-style-position: inside;
   margin:0;
   padding: 0;
+}
+
+li {
+  margin-bottom: 7px;
+}
+
+#bio, #edu, #exp, #goals, #favRocks {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 #bio {
@@ -50,7 +82,6 @@ ul, ol {
 
 #edu, #exp {
   width: 45%;
- 
   float: right;
 }
 
@@ -64,7 +95,7 @@ ul, ol {
 .sticky {
   position: fixed;
   top: 0;
-  width: 96.5%;
+  width: 96.75%;
 }
 
 .sticky + .content {
