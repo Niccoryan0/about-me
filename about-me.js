@@ -56,10 +56,10 @@ function askNumQ() {
 function askMinQ() {
   var favMinerals = ['Tourmaline', 'Bismuth', 'Opal', 'Fluorite', 'Amethyst', 'Azurite', 'Realgar', 'Rhodochrosite', 'Pyrite', 'Labradorite'];
   var favMinString = favMinerals.join(', ');
-  var guessCountMulti = 0;
+  var guessCountNum = 0;
   var correct = false;
-  while (guessCountMulti < 6) {
-    var guessMulti = prompt('Try to guess one of my favorite minerals! Attempts remaining: ' + (6 - guessCountMulti)).toLowerCase();
+  while (guessCountNum < 6) {
+    var guessMulti = prompt('Try to guess one of my favorite minerals! Attempts remaining: ' + (6 - guessCountNum)).toLowerCase();
     // Check user's guess against all items in the favMinerals list
     for (var x = 0; x < favMinerals.length; x++) {
       if (guessMulti === favMinerals[x].toLowerCase()) {
@@ -73,10 +73,10 @@ function askMinQ() {
     if (correct) {
       break;
     } else {
-      guessCountMulti++;
+      guessCountNum++;
     }
   }
-  if (guessCountMulti >= 4) {
+  if (guessCountNum >= 4) {
     alert('Sorry, attempt limit (6) reached, my favorite minerals are: ' + favMinString);
   }
 }
